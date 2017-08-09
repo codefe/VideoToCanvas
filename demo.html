@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>VideoToCanvas</title>
+    <script src="video2canvas.js" />
+</head>
+<body>
+    <video id="video" controls loop width='300' autoplay webkit-playsinline="true" src='http://www.w3school.com.cn/example/html5/mov_bbb.mp4'></video>
+
+<p>
+  <button type="button" id='btn-play'>开始</button>
+  <button type="button" id='btn-pause'>暂停</button>
+</p>
+</body>
+<script>
+
+    var video = document.getElementById('video');
+    var canvasVideo = new VideoToCanvas(video);
+    document.getElementById('btn-play').addEventListener('click', function () {
+        canvasVideo.play();
+    }, false);
+    document.getElementById('btn-pause').addEventListener('click', function () {
+        canvasVideo.pause();
+    }, false);
+
+</script>
+</html>
+
